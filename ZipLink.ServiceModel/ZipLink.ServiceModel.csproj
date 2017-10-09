@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ServiceStack.Interfaces.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL.Core" Version="1.0.44" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZipLink.DataAccessLayer\ZipLink.DataAccessLayer.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+﻿<div class="">
+    <div class="alert" [ngClass]="{'alert-success': isSuccess(), 'alert-danger': isFail(), 'invisible': isAlertInvisible()}">
+        <div innerHTML="{{ alertText }}"></div>
+    </div>
+    <form class="form-horizontal" role="form">
+        <fieldset [disabled]="isDisableForm()">
+        <div class="form-group">
+            <div class="">
+                <input type="url" class="form-control" 
+                    [(ngModel)]="link" [ngModelOptions]="{standalone: true}"/>
+            </div>
+        </div>
+        <div class="form-group">
+          <div class="">
+            <button type="submit" class="btn btn-primary" (click)="zipLink()">Zip</button>
+          </div>
+        </div>
+        </fieldset>
+      </form>
+
+</div>

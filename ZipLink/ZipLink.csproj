@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>ZipLink</AssemblyName>
+    <!-- <OutputType>Exe</OutputType> -->
+    <!-- <PackageId>Mvc</PackageId> -->
+    <RuntimeFrameworkVersion>2.0</RuntimeFrameworkVersion>
+    <!-- <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback> -->
+    <RootNamespace>ZipLink</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="wwwroot\**\*">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.0" />
+    <PackageReference Include="ServiceStack.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Interfaces.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Mvc.Core" Version="1.0.44" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL.Core" Version="1.0.44" />
+    <PackageReference Include="ServiceStack.Text.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Client.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Common.Core" Version="1.0.*" />
+  </ItemGroup>
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+    <Exec Command="bower install" />
+    <Exec Command="dotnet bundle" />
+  </Target>
+  <ItemGroup>
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.2.301" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZipLink.ServiceInterface\ZipLink.ServiceInterface.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="npm-debug.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\dist" />
+  </ItemGroup>
+</Project>

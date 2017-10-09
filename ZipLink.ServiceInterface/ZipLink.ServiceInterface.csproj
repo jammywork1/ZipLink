@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ServiceStack.Client.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Common.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Interfaces.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.OrmLite.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Redis.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Server.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.Text.Core" Version="1.0.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZipLink.BusinessLogic\ZipLink.BusinessLogic.csproj">
+      <Project>{9DFE3A7C-9774-40FA-BB16-49D23EF33E4B}</Project>
+      <Name>ZipLink.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZipLink.ServiceModel\ZipLink.ServiceModel.csproj" />
+  </ItemGroup>
+</Project>

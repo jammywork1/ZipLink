@@ -1,0 +1,4 @@
+# Release App Settings
+
+DebugMode false
+ConnectionString Server=localhost;Port=5432;Database=ZippedLinks;User ID=postgres;Password=123;

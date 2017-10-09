@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ServiceStack.Interfaces.Core" Version="1.0.*" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL.Core" Version="1.0.44" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZipLink.DataAccessLayer\ZipLink.DataAccessLayer.csproj">
+      <Project>{D6237856-BFCB-4C1F-8936-1495C2EC9FD9}</Project>
+      <Name>ZipLink.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZipLink.DataAccessLayer\ZipLink.DataAccessLayer.csproj">
+      <Project>{D6237856-BFCB-4C1F-8936-1495C2EC9FD9}</Project>
+      <Name>ZipLink.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZipLink.DataAccessLayer\ZipLink.DataAccessLayer.csproj">
+      <Project>{D6237856-BFCB-4C1F-8936-1495C2EC9FD9}</Project>
+      <Name>ZipLink.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZipLink.DataAccessLayer\ZipLink.DataAccessLayer.csproj">
+      <Project>{D6237856-BFCB-4C1F-8936-1495C2EC9FD9}</Project>
+      <Name>ZipLink.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZipLink.DataAccessLayer\ZipLink.DataAccessLayer.csproj">
+      <Project>{D6237856-BFCB-4C1F-8936-1495C2EC9FD9}</Project>
+      <Name>ZipLink.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZipLink.DataAccessLayer\ZipLink.DataAccessLayer.csproj">
+      <Project>{D6237856-BFCB-4C1F-8936-1495C2EC9FD9}</Project>
+      <Name>ZippedLink.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
