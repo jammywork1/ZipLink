@@ -9,7 +9,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let link of zippedLinks">
-                    <td><a href="{{ link.zippedLink }}"><button (click)="unzipLink()">{{ link.hash }}</button></a></td>
+                    <td><a href="{{ link.zippedLink }}" (click)="unzipLink()">{{ link.hash }}</a></td>
                     <td>{{ link.originalLink }}</td>
                     <td>{{ formatDateTime(link.created) }}</td>
                     <td>{{ link.followed }}</td>
